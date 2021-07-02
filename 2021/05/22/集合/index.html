@@ -217,8 +217,104 @@
     <div class="content-article">
         <h1 id="什么是集合？有什么用？"><a href="#什么是集合？有什么用？" class="headerlink" title="什么是集合？有什么用？"></a>什么是集合？有什么用？</h1><h3 id="数组其实就是一个集合。集合实际上就是一个容器。可以来容纳其他类型的数据。集合中不能直接存储基本数据类型、java对象，集合"><a href="#数组其实就是一个集合。集合实际上就是一个容器。可以来容纳其他类型的数据。集合中不能直接存储基本数据类型、java对象，集合" class="headerlink" title="数组其实就是一个集合。集合实际上就是一个容器。可以来容纳其他类型的数据。集合中不能直接存储基本数据类型、java对象，集合"></a>数组其实就是一个集合。集合实际上就是一个容器。可以来容纳其他类型的数据。集合中不能直接存储基本数据类型、java对象，集合<br></h3><h3 id="当中存储的都是java对象的内存地址-引用-。"><a href="#当中存储的都是java对象的内存地址-引用-。" class="headerlink" title="当中存储的都是java对象的内存地址(引用)。"></a>当中存储的都是java对象的内存地址(引用)。<br></h3><h3 id="在java中每一个不同的集合，底层会对应不同的数据结构-数组、二叉树、链表、哈希表、图…-。"><a href="#在java中每一个不同的集合，底层会对应不同的数据结构-数组、二叉树、链表、哈希表、图…-。" class="headerlink" title="在java中每一个不同的集合，底层会对应不同的数据结构(数组、二叉树、链表、哈希表、图….)。"></a>在java中每一个不同的集合，底层会对应不同的数据结构(数组、二叉树、链表、哈希表、图….)。<br></h3><h3 id="集合在java-jdk中的java-util"><a href="#集合在java-jdk中的java-util" class="headerlink" title="集合在java jdk中的java.util.*"></a>集合在java jdk中的java.util.*<br></h3><h3 id="在java中集合分为两大类"><a href="#在java中集合分为两大类" class="headerlink" title="在java中集合分为两大类"></a>在java中集合分为两大类<br></h3><h3 id="一类是单个方式存储元素"><a href="#一类是单个方式存储元素" class="headerlink" title="一类是单个方式存储元素"></a>一类是单个方式存储元素<br></h3><pre><code>###单个方式存储元素，这一类集合中超级父接口：java.util.Collection&lt;br&gt;
 </code></pre>
-<p><img src="/images/collection.png" alt="Collection集合继承结构图"><br><br>    ### 一类是以键值对儿的方式存储元素<br><br>        ###以键值对儿的方式存储元素，这一类集合中的超级父接口:java.util.Map<br></p>
+<p><img src="/images/collection.png" alt="Collection集合继承结构图"><br></p>
+<p>###list接口中的常用方法</p>
+<p>###1.list集合存储元素特点：有序可重复</p>
+<p>###有序：list集合中的元素有下标。从0开始，以1递增。</p>
+<p>###2.list接口特有的常用方法：</p>
+<p>###void add(int index,E element)  //在列表指定位置插入指定元素</p>
+<p>###E get(int index)                           //通过下标获取元素</p>
+<p>###int indexof(Object o)                //获取指定对象第一次出现处的索引</p>
+<p>###E remove(int index)                  //删除指定下标处的元素</p>
+<p>###E set(int index,E element)        //修改指定位置的元素</p>
+<p>##ArrayList集合：<br></p>
+<p>###1.默认初始化容量10</p>
+<p>###2.集合底层是一个Object[]数组</p>
+<p>###3.构造方法：</p>
+<p>###new ArrayList();</p>
+<p>###new ArrayList(20);</p>
+<p>###4.ArrayList集合的扩容：</p>
+<p>###增长到原容量的1.5倍。</p>
+<p>###ArrayList集合底层是数组，怎么优化？</p>
+<p>###尽可能少的扩容，因为数组扩容效率比较低，建议在使用ArrayList的时候预估计元素的个数，给定一个初始化容量。</p>
+<p>##LinkedList集合<br></p>
+<p>###底层是双向链表数据结构</p>
+<p>###LinkedList的优点</p>
+<p>####随机增删效率较高，因为链表随机增删不设计到元素的大批量位移</p>
+<p>###LinkedList缺点</p>
+<p>####检索效率低，因为每次检索都要从头节点开始一个一个找</p>
+<p>##Vector集合</p>
+<p>###1.底层也是一个数组</p>
+<p>###2.初始化容量为10</p>
+<p>###3.怎么扩容的</p>
+<p>####扩容之后是原容量的2倍</p>
+<p>###4.Vector中的所有方法都是线程同步的，都带有synchronized关键字，是线程安全的。(效率较低不常用了)</p>
+<p>###5.怎么将一个线程不安全的ArrayList集合转换成线程安全的呢？</p>
+<p>####使用集合工具类：</p>
+<p>#####java.util.Collections;</p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List myList = new ArrayList(); //非线程安全的</span><br><span class="line">//变成线程安全的</span><br><span class="line">Collections.synchronizedList(myList);</span><br><span class="line">//myList集合就是安全的了</span><br><span class="line">myList.add(&quot;111&quot;);</span><br><span class="line">myList.add(&quot;222&quot;);</span><br><span class="line">myList.add(&quot;333&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>##HashSet集合：</p>
+<p>###无需不可重复</p>
+<p>##TreeSet集合</p>
+<p>###1.无序不可重复，但是存储的元素自动按照大小排序，称为：可排序集合</p>
+<p>###2.无序：这里的无序指的是存进去的顺序和取出来的顺序不同。并且没有下标</p>
+<pre><code>### 一类是以键值对儿的方式存储元素&lt;br&gt;
+</code></pre>
+<p>​        ###以键值对儿的方式存储元素，这一类集合中的超级父接口:java.util.Map<br></p>
 <p><img src="/images/Map.png" alt="Map集合继承结构图"><br></p>
+<p>##java.util.Map：</p>
+<p>###1.Map和Collection没有继承关系</p>
+<p>###2.Map集合以Key和Value的方式存储数据：键值对</p>
+<p>####Key和Value都是引用数据类型</p>
+<p>####Key和Value都是存储对象的内存地址</p>
+<p>####Key起到主导的地位，Value是Key的一个附属品</p>
+<p>###3.Map接口中的常用方法:</p>
+<p>####void clear();      //清空Map集合</p>
+<p>####boolean containsKey(Object key)             //判断是否包含某个key</p>
+<p>####boolean containsValue(Object value)             //判断是否包含某个value</p>
+<p>####V get(Object key)     //通过key得到Value</p>
+<p>####boolean isEmpty()    //判断Map集合中的元素个数是否为0</p>
+<p>####Set<K> keySet()       //获取Map集合中的所有key(所有的key是个set集合)</p>
+<p>####V put(K key,V value)   //添加键值对</p>
+<p>####V remove(Object key)  //通过key删除键值对</p>
+<p>####int size()   //获取Map集合中的键值对个数</p>
+<p>####Collection<V>  values()    //获取Map集合中所有的value,返回一个Collection</p>
+<p>####Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()    //将Map集合转换成Set集合</p>
+<hr>
+<p>###Map集合的遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public class mapTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">    //创建Map集合</span><br><span class="line">        Map&lt;Integer,String&gt; map =new HashMap();</span><br><span class="line">        //添加键值对</span><br><span class="line">        map.put(1,&quot;sun&quot;);</span><br><span class="line">        map.put(2,&quot;ze&quot;);</span><br><span class="line">        map.put(3,&quot;tian&quot;);</span><br><span class="line">        //获取Map集合中所有的键</span><br><span class="line">        Set&lt;Integer&gt; keys = map.keySet();</span><br><span class="line">        通过迭代器拿到Set集合中的key</span><br><span class="line">        Iterator&lt;Integer&gt; it =keys.iterator();</span><br><span class="line">        while (it.hasNext())&#123;</span><br><span class="line">            Integer k=it.next();</span><br><span class="line">            //通过拿到的key获取value值</span><br><span class="line">            String value =map.get(k);</span><br><span class="line">            System.out.println(value);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        //第二种方式Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet() </span><br><span class="line">        Set&lt;Map.Entry&lt;Integer,String&gt;&gt; set=map.entrySet();</span><br><span class="line">       Iterator&lt;Map.Entry&lt;Integer,String&gt;&gt; it=set.iterator();</span><br><span class="line">       while (it.hasNext())&#123;</span><br><span class="line">           Map.Entry&lt;Integer,String&gt; node=it.next();</span><br><span class="line">           String value=node.getValue();</span><br><span class="line">           System.out.println(value);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>##HashMap集合：</p>
+<p>###1.HashMap集合底层是哈希表/散列表的数据结构</p>
+<p>###2.哈希表是一个怎样的数据结构？</p>
+<p>####哈希表是一个数组和单向链表的结合体</p>
+<p>####数组：在查询方面效率很高，随机增删方面效率很低</p>
+<p>####单向链表：在随机增删方面效率较高，在查询方面效率很低</p>
+<p>####哈希表将以上两种数据结构融合在一起，充分发挥它们各自的优点</p>
+<p>###map.put(k,v)实现原理。</p>
+<p>###重点：<b>放在HashMap集合key部分的元素，以及放在HashSet集合中的元素，需要同时重写HashCode()和equals()<b></p>
+<p>###HashMap集合的默认初始化容量是16，默认加载因子是0.75</p>
+<p>####这个默认加载因子是当HashMap集合底层数组的容量达到75%的时候，数组开始扩容，扩容之后的容量是原容量的2倍。</p>
+<p>####重点，记住：HashMap的初始化容量必须是2的倍数，这也是官方推荐的，这是为了达到散列均匀，为了提高HashMap集合的存取效率，所必须的。</p>
+<p>###在JDK8之后，如果哈希表单向链表中元素超过8个，单向链表这种数据结构会变成红黑树数据结构。当红黑树上的节点数量小于6时，会重新把红黑树变成单向链表数据结构。这种方式也是为了提高检索效率，二叉树的检索会再次缩小扫描范围，提高效率</p>
+<p>###HashMap的key和value可以为空</p>
+<p>###Hashtable的key和value不可以为空</p>
+<p>####Hashtable方法都带有synchronized:线程安全的。</p>
+<p>####线程安全有其他的方案，这个Hashtable对线程的处理导致效率较低，使用较少了</p>
+<p>###Hashtable和HashMap一样，底层都是哈希表数据结构</p>
+<p>####Hashtable的初始化容器是11，默认加载因子是0.75f。扩容之后是原容量*2+1</p>
+<p>###Properties是一个Map集合，继承Hashtable，Properties的key和value都是String类型</p>
+<p>###Properties被称为属性类对象</p>
+<p>###Properties是线程安全的</p>
+<p>###Properties的两个重要方法</p>
+<p>####setProperty();      //存</p>
+<p>####getProperty();      //取</p>
+<p>###1.TreeSet集合底层实际上是一个TreeMap</p>
+<p>###2.TreeMap集合底层是一个二叉树</p>
+<p>###3.放到TreeSet集合中的元素，等同于放到TreeMap集合key部分了</p>
+<p>###4.TreeSet集合中的元素：无序不可重复，但是可以按照元素的大小顺序自动排序，称为：可排序集合</p>
 
     </div>
 </article>
@@ -359,7 +455,7 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 9.249896966566629px;" class="tag-cloud-link">Java基础</a>
+    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 10.838266197520909px;" class="tag-cloud-link">Java基础</a>
     
 </div>
                 
