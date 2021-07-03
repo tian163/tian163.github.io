@@ -139,6 +139,10 @@
                             <a href="/tags/Java%E5%9F%BA%E7%A1%80/">Java基础</a>
                         </li>
                         
+                        <li>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                        </li>
+                        
                         
                         
                     </ul>
@@ -303,18 +307,24 @@
 <p>###Hashtable的key和value不可以为空</p>
 <p>####Hashtable方法都带有synchronized:线程安全的。</p>
 <p>####线程安全有其他的方案，这个Hashtable对线程的处理导致效率较低，使用较少了</p>
-<p>###Hashtable和HashMap一样，底层都是哈希表数据结构</p>
-<p>####Hashtable的初始化容器是11，默认加载因子是0.75f。扩容之后是原容量*2+1</p>
-<p>###Properties是一个Map集合，继承Hashtable，Properties的key和value都是String类型</p>
-<p>###Properties被称为属性类对象</p>
-<p>###Properties是线程安全的</p>
-<p>###Properties的两个重要方法</p>
-<p>####setProperty();      //存</p>
-<p>####getProperty();      //取</p>
-<p>###1.TreeSet集合底层实际上是一个TreeMap</p>
-<p>###2.TreeMap集合底层是一个二叉树</p>
-<p>###3.放到TreeSet集合中的元素，等同于放到TreeMap集合key部分了</p>
-<p>###4.TreeSet集合中的元素：无序不可重复，但是可以按照元素的大小顺序自动排序，称为：可排序集合</p>
+<p>Hashtable和HashMap一样，底层都是哈希表数据结构</p>
+<p>Hashtable的初始化容器是11，默认加载因子是0.75f。扩容之后是原容量*2+1</p>
+<p>Properties是一个Map集合，继承Hashtable，Properties的key和value都是String类型</p>
+<p>Properties被称为属性类对象</p>
+<p>Properties是线程安全的</p>
+<p>Properties的两个重要方法</p>
+<p>setProperty();      //存</p>
+<p>getProperty();      //取</p>
+<p>1.TreeSet集合底层实际上是一个TreeMap</p>
+<p>2.TreeMap集合底层是一个二叉树</p>
+<p>3.放到TreeSet集合中的元素，等同于放到TreeMap集合key部分了</p>
+<p>4.TreeSet集合中的元素：无序不可重复，但是可以按照元素的大小顺序自动排序，称为：可排序集合</p>
+<p>5.TreeSet不能排序自定义类型数据，因为自定义的数据类型没有实现Comparable接口，在底层向下转型时会出现java.lang.ClassCastException:</p>
+<p>实现排序的第一种方式：实现Comparable接口，实现接口中的方法</p>
+<p>实现排序的第二种方法：使用比较器</p>
+<p>Comparable和Comparator怎么选择？</p>
+<p>​    当比较规则不会发生改变的时候，或者说当比较规则只有1个的时候，建议实现Comparable接口。如果比较规则有多个，并且需要多个比较规则之间频繁切换，建议使用Comparator接口。</p>
+<p>​    Comparator接口的设计符合OCP原则。</p>
 
     </div>
 </article>
@@ -376,6 +386,18 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2021/07/03/idea%E7%9A%84%E4%BD%BF%E7%94%A8/">idea的使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/07/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2021/06/15/hello-world/">Hello World</a>
                 </span>
             </li>
@@ -426,6 +448,18 @@
                 </span>
             </li>
             
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/07/03/idea%E7%9A%84%E4%BD%BF%E7%94%A8/">idea的使用</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/07/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+                </span>
+            </li>
+            
         </ul>
     </div>
 </aside>
@@ -455,7 +489,9 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 18.80582684865581px;" class="tag-cloud-link">Java基础</a>
+    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 18.86851494564983px;" class="tag-cloud-link">Java基础</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 9.391998704899784px;" class="tag-cloud-link">数据结构</a>
     
 </div>
                 
