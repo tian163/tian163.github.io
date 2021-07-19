@@ -10,7 +10,7 @@
     
     
     
-    <title>archive_a | Hexo</title>
+    <title>html | Hexo</title>
     <link href="http://example.com" rel="prefetch" />
 
     
@@ -107,7 +107,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -174,19 +174,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://example.com">Hexo</a>
         >
-        <span>归档</span>
+        <span>html</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2021/07/14/html/">html</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/html/">html</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2021-07-14
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -194,59 +209,211 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2021/07/14/html/">html</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2021-07-14
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/html/">html</a>
+                
+                
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2021年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2021/07/16/css/">css</a>
-                        <br>
-            
-             
-                        <a href="/2021/07/14/html/">html</a>
-                        <br>
-            
-             
-                        <a href="/2021/07/05/IO%E6%B5%81/">IO流</a>
-                        <br>
-            
-             
-                        <a href="/2021/07/03/%E6%95%B0%E7%BB%84/">数组</a>
-                        <br>
-            
-             
-                        <a href="/2021/07/03/idea%E7%9A%84%E4%BD%BF%E7%94%A8/">idea的使用</a>
-                        <br>
-            
-             
-                        <a href="/2021/07/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
-                        <br>
-            
-             
-                        <a href="/2021/06/15/hello-world/">Hello World</a>
-                        <br>
-            
-             
-                        <a href="/2021/05/22/%E9%9B%86%E5%90%88/">集合</a>
-                        <br>
-            
-             
-                        <a href="/2021/05/19/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">我的第一篇博文</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <p>1.html注释 <!-- DOCTYPE:告诉浏览器，我们要使用什么规范 --></p>
+<p>2.<head></head> 网页头部</p>
+<p>3.<body></body> 网页主体</p>
+<p>4.<title></title> 网页标题</p>
+<p>5.<meta> 描述性标签，用来描述网站的信息</p>
+<p>基本标签：</p>
+<p>1.标题标签 h1-h6</p>
+<h1>一级标签</h1>
+
+
+
+<h2>二级标签</h2>
+
+<p>段落标签 p</p>
+<p>换行标签  br</p>
+<p>水平线标签 hr</p>
+<p>字体样式标签</p>
+<p>​    粗体：strong<strong>粗体</strong></p>
+<p>​    斜体：em<em>斜体</em></p>
+<p>特殊符号</p>
+<p>空格：&amp;nbsp；</p>
+<p>​    空&nbsp;&nbsp;格</p>
+<p>大于号：&amp;gt；</p>
+<p>小于号：&amp;lt；</p>
+<p>版权符号：&amp;copy；</p>
+<p>2.常见的图片格式</p>
+<p>​    JPG</p>
+<p>​    GIF</p>
+<p>​    PNG</p>
+<p>​    BMP 位图</p>
+<p>嵌入图片：&lt;img src=”path” alt=”text” title=”text” width=”x” height=”y” /&gt;</p>
+<!--img学习
+
+src：图片地址
+
+​            相对地址(推荐使用)，绝对地址
+
+​            ../      --上一级目录
+
+alt:图片名字
+
+title：鼠标悬停时显示的文字
+
+-->
+
+<p>3.链接标签：&lt;a href=” “ target=” “&gt;&lt;/a&gt;</p>
+<p>​    href: 必填，表示要跳转到哪个页面</p>
+<p>​    target:表示窗口在哪里打开</p>
+<p>​        _blank    在新标签打开</p>
+<p>​        _self    在自己的网页中打开</p>
+<p>锚链接：</p>
+<p>​    1.需要一个锚标记</p>
+<p>​    2.跳转到标记</p>
+<p>使用name做标记，#name跳转</p>
+<p>功能性链接：</p>
+<p>​    邮件链接：mailto:</p>
+<p>​    &lt;a href=”mailto:<a href="mailto:&#x35;&#x35;&#54;&#56;&#55;&#x33;&#x35;&#x38;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#x35;&#x35;&#54;&#56;&#55;&#x33;&#x35;&#x38;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>“ &gt;&lt;/a&gt;</p>
+<hr>
+<p>行内元素和块元素</p>
+<p>块元素：</p>
+<p>​    无论内容多少，该元素独占一行</p>
+<p>行内元素：</p>
+<p>​    内容撑开宽度，左右都是行内元素的可以排在一行</p>
+<hr>
+<p>列表</p>
+<p>​    有序列表</p>
+<p>​        &lt;ol&gt;</p>
+<p>​            &lt;li&gt;&lt;/li&gt;</p>
+<p>​        &lt;/ol&gt;</p>
+<p>​    无序列表(应用范围：导航栏、侧边栏……)</p>
+<p>​        &lt;ul&gt;</p>
+<p>​            &lt;li&gt;&lt;/li&gt;</p>
+<p>​        &lt;/ul&gt;</p>
+<p>​    自定义列表</p>
+<p>​        dl:标签</p>
+<p>​        dt:列表名称</p>
+<p>​        dd:列表选项</p>
+<p>​        &lt;dl&gt;</p>
+<p>​            &lt;dt&gt;&lt;/dt&gt;</p>
+<p>​            &lt;dd&gt;&lt;/dd&gt;</p>
+<p>​        &lt;/dl&gt;</p>
+<hr>
+<p>表格table：</p>
+<p>​    行：tr    rows</p>
+<p>​    列：td    </p>
+<p>colspan：跨列</p>
+<p>rowspan：跨行</p>
+<hr>
+<p>视频video</p>
+<!--src：资源路径    controls：控制条    autoplay：自动播放 -->
+
+<p>​    &lt;video src=”” controls autoplay&gt;&lt;/video&gt;</p>
+<p>音频audio</p>
+<p>​    &lt;audio src=”” controls autoplay&gt;&lt;/audio&gt;</p>
+<hr>
+<p>页面结构分析</p>
+<p>header：标题头部区域的内容</p>
+<p>footer：标记脚步区域的内容</p>
+<p>section：Web页面中的一块独立区域</p>
+<p>article：独立的文章内容</p>
+<p>aside：相关内容或应用(常用于侧边栏)</p>
+<p>nav:导航类辅助内容</p>
+<hr>
+<p>iframe内联框架</p>
+<!-- src:地址    w-h:宽度和高度 -->
+
+<p>​    &lt;iframe src=” “ frameborder=”0” width=” “ height=” “&gt;&lt;/iframe&gt;</p>
+<hr>
+<p>表单语法</p>
+<p>​    action:表单提交的位置，可以是网站，也可以是一个请求处理地址</p>
+<p>​    method:    post，get    提交方式</p>
+<p>​            get方式提交：我们可以在url中看到我们提交的信息，不安全，高效</p>
+<p>​            post方式：比较安全，传输大文件</p>
+<p>​    &lt;form action=”#” method=”get”&gt;&lt;/form&gt;</p>
+<p>​    <!-- 文本输入框：input type="text"    value=" "：默认值    maxlength=""：最长写几个字符    size=" ":文本框的长度 --></p>
+<p>​    &lt;p&gt;名字：&lt;input type=”text” name=”username”&gt;&lt;/input&gt;&lt;/p&gt;</p>
+<p>​    <!--密码框：input type="password" --></p>
+<p>​    &lt;p&gt;名字：&lt;input type=”password” name=”pwd”&gt;&lt;/input&gt;&lt;/p&gt;</p>
+<p>​    <!--单选框：input type="radio"    value=" ":单选框的值    name=" ":表示组--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”radio” value=”boy” name=”sex”/&gt;男</p>
+<p>​        &lt;input type=”radio” value=”girl” name=”sex”/&gt;女</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--多选框：input type="checkbox"--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”checkbox” value=”sleep” name=”hobby”/&gt;睡觉</p>
+<p>​        &lt;input type=”checkbox” value=”code” name=”hobby”/&gt;敲代码</p>
+<p>​        &lt;input type=”checkbox” value=”chat” name=”hobby”/&gt;聊天</p>
+<p>​        &lt;input type=”checkbox” value=”game” name=”hobby”/&gt;游戏</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--按钮--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”button” name=”btn1” value=” “&gt;        //普通按钮</p>
+<p>​        &lt;input type=”image” src=” “&gt;                                    //图像按钮</p>
+<p>​    &lt;/P&gt;</p>
+<p>​    <!--下拉框，列表框--></p>
+<p>​    &lt;p&gt;下拉框：</p>
+<p>​        &lt;select name=”列表名称”&gt;</p>
+<p>​                &lt;option value=”选项的值”&gt;&lt;/option&gt;</p>
+<p>​        &lt;/select&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--文本域--></p>
+<p>​    &lt;p&gt;反馈：</p>
+<p>​        &lt;textarea name=”textarea”&gt;&lt;/textarea&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--文件域--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”file” name=”files”&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!-- 提交：input type="submit"    重置：input type="reset"--></p>
+<p>​    &lt;p&gt;&lt;input type=”submit” &gt;&lt;input type=”reset”&gt;&lt;/p&gt;</p>
+<p>​    <!--邮件验证--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”email” name=”email”&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--url验证--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”url” name=”url”&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--数字验证--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”number” name=”number” max=”100” min=”0” step=”10”&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--滑块--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”range” name=”voice” max=”100” min=”0” step=”10”&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<p>​    <!--搜索框--></p>
+<p>​    &lt;p&gt;</p>
+<p>​        &lt;input type=”search” name=”search”&gt;</p>
+<p>​    &lt;/p&gt;</p>
+<!--增强鼠标可用性-->
+
+<p>&lt;label for=”mark”&gt;&lt;/label&gt;</p>
+<p>&lt;input type=”text” id=”mark”&gt;</p>
+<p>隐藏域    hidden</p>
+<p>只读        readonly</p>
+<p>禁用        disabled</p>
+<p>表单初级验证</p>
+<p>placeholder    提示信息</p>
+<p>required        非空判断</p>
+<p>pattern            正则表达式</p>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -436,17 +603,17 @@
 
                 
                 <li>
-                    <a href="/archives/2021/07/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2021/07/14/html/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2021/07/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2021/07/14/html/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2021/07/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2021/07/14/html/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -454,13 +621,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 16.889971125416288px;" class="tag-cloud-link">Java基础</a>
+    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 8.904873822059246px;" class="tag-cloud-link">Java基础</a>
     
-    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 8.20570432503227px;" class="tag-cloud-link">数据结构</a>
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 15.565484164376755px;" class="tag-cloud-link">数据结构</a>
     
-    <a href="/tags/css/" style="font-size: 12.209924996158588px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 15.215023762158523px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/html/" style="font-size: 19.55177021694395px;" class="tag-cloud-link">html</a>
+    <a href="/tags/html/" style="font-size: 12.617697265279158px;" class="tag-cloud-link">html</a>
     
 </div>
                 
