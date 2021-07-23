@@ -10,7 +10,7 @@
     
     
     
-    <title>异常 | Hexo</title>
+    <title>mysql | Hexo</title>
     <link href="http://example.com" rel="prefetch" />
 
     
@@ -180,19 +180,19 @@
         <i class="fa fa-home"></i>
         <a href="http://example.com">Hexo</a>
         >
-        <span>异常</span>
+        <span>mysql</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2021/07/03/%E5%BC%82%E5%B8%B8/">异常</a>
+                <a href="/2021/07/23/mysql/">mysql</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2021-07-03
+                <i class="fa fa-calendar"></i> 2021-07-23
             </span>
             
         </div>
@@ -202,11 +202,11 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2021/07/03/%E5%BC%82%E5%B8%B8/">异常</a>
+                    <a href="/2021/07/23/mysql/">mysql</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2021-07-03
+                <i class="fa fa-calendar"></i> 2021-07-23
             </p>
             <p>
                 
@@ -215,12 +215,103 @@
         </center>
     </div>
     <div class="content-article">
-        <p>1.异常分为三种类型：</p>
-<p>检查性异常：用户错误或问题引起的异常</p>
-<p>运行时异常：运行时异常时可能被程序员避免的异常，与检查性异常相反，运行时异常可以在编译时被忽略</p>
-<p>错误：错误不是异常，二十脱离程序员控制的问题。错误在代码中通常被忽略</p>
-<p>2.自定义异常类</p>
-<p>只需要继承Exception</p>
+        <p>1.初识MySQL</p>
+<p>JavaEE：企业级Java开发 Web</p>
+<p>前端(页面：展示，数据)    </p>
+<p>后台：(连接点：链接数据库JDBC，连接前端（控制，控制试图跳转，和给前端传数据)</p>
+<p>数据库：(存数据)</p>
+<p>1.1为什么学习数据库</p>
+<p>1.岗位需求</p>
+<p>2.大数据时代</p>
+<p>3.存数据</p>
+<p>4.数据库是所有软件体系中最核心的存在</p>
+<p>1.2什么是数据库</p>
+<p>数据库(DB,DataBase)</p>
+<p>概念：数据仓库，软件</p>
+<p>作用：存数据，管理数据</p>
+<p>1.3数据库分类</p>
+<p>关系型数据库：</p>
+<p>MySQL,Oracle,Sql Server,DB2,SQLlite</p>
+<p>通过表和表之间，行和列之间的关系进行数据存储，轩辕信息表，考勤表</p>
+<p>非关系型数据库:</p>
+<p>Redis，MongDB</p>
+<p>非关系型数据库，对象存储，通过对象的自身属性来决定</p>
+<p><strong>DBMS(数据库管理系统)</strong></p>
+<p>数据库的管理软件，科学有效的管理我们的数据。维护和获取数据</p>
+<p>1.4MySQL简介</p>
+<p>MySQL是一个<strong>关系型数据库管理系统</strong></p>
+<p>MySQL是最好的 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/RDBMS/1048260">RDBMS</a> (Relational Database Management System，关系数据库管理系统) 应用软件之一。</p>
+<p>开源，体积小，速度快</p>
+<p>1.5链接数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql <span class="operator">-</span>u root <span class="operator">-</span>p	<span class="comment">-- 连接数据库</span></span><br><span class="line">所有的语句都是用;结尾</span><br><span class="line"><span class="keyword">show</span> databases;	<span class="comment">-- 查看所有的数据库</span></span><br><span class="line">use school	<span class="comment">-- 切换数据库</span></span><br><span class="line"><span class="keyword">show</span> tables;	<span class="comment">-- 查看数据库中所有的表</span></span><br><span class="line"><span class="keyword">describe</span> student;	<span class="comment">-- 显示数据库中所有的表信息</span></span><br><span class="line"><span class="keyword">create</span> database westos;	<span class="comment">-- 创建一个数据库</span></span><br><span class="line">exit;	<span class="comment">-- 退出链接</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>数据库xxx语言</strong>    CRUD增删改查</p>
+<p>DDL    定义</p>
+<p>DML    操作</p>
+<p>DQL    查询</p>
+<p>DCL    控制</p>
+<p>2.操作数据库</p>
+<p>操作数据库&gt;操作数据库中的表&gt;操作数据库表中的数据</p>
+<p>mysql不区分大小写</p>
+<p>2.1操作数据库</p>
+<p>1.创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database [if <span class="keyword">not</span> <span class="keyword">exists</span>] westos;</span><br></pre></td></tr></table></figure>
+
+<p>2.删除数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> database [if <span class="keyword">exists</span>] westos;</span><br></pre></td></tr></table></figure>
+
+<p>3.使用数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use `school`</span><br></pre></td></tr></table></figure>
+
+<p>4.查看数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> database</span><br></pre></td></tr></table></figure>
+
+<p>2.2数据库的列类型</p>
+<blockquote>
+<p>数值</p>
+</blockquote>
+<p>tinyint    十分小的数据    1个字节</p>
+<p>smallint    较小的数据    2个字节</p>
+<p><strong>int            表准的字节    4个字节</strong></p>
+<p>big            较大的数据    8个字节</p>
+<p>float        浮点数            4</p>
+<p>double    浮点数            8</p>
+<p>decimal    字符串形式的浮点数    金融计算时使用</p>
+<blockquote>
+<p>字符串</p>
+</blockquote>
+<p>char    字符串固定大小的    0-255</p>
+<p><strong>varchar    可变字符串    0-65535</strong>    常用变量    string</p>
+<p>tingtext    微型文本    2^8-1</p>
+<p><strong>text            文本串        2^16-1</strong>    保存大文件</p>
+<blockquote>
+<p>时间日期</p>
+</blockquote>
+<p>date    YYYY-MM-DD    日期格式</p>
+<p>time    HH:mm:ss    时间格式</p>
+<p><strong>datetime    YYYY-MM-DD HH:mm:ss    最常用的时间格式</strong></p>
+<p>timestamp    时间戳</p>
+<p>year    年份表示</p>
+<blockquote>
+<p>null</p>
+</blockquote>
+<p>没有值，未知</p>
+<p>注意不要使用NULL进行运算，结果为NULL</p>
+<p>2.3数据库的字段属性</p>
+<p>Unsigned:</p>
+<p>​    无符号的整数</p>
+<p>​    不能声明为负数 </p>
+<p>zerfill</p>
+<p>​    0填充</p>
+<p>​    不足的位数，使用0来填充</p>
+<p>自增</p>
+<p>​    自动在上一条记录的基础上+1</p>
+<p>​    通常用来设计唯一的主键，必须是整数类型</p>
+<p>​    可以自定义设计主键自增的起始值和步长</p>
+<p>非空    Null not null</p>
+<p>​    设置为not null，不给赋值就会报错</p>
+<p>默认</p>
+<p>​    设置默认的值</p>
 
     </div>
 </article>
@@ -364,7 +455,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/07/03/idea%E7%9A%84%E4%BD%BF%E7%94%A8/">idea的使用</a>
+                    <a href="/2021/07/05/IO%E6%B5%81/">IO流</a>
                 </span>
             </li>
             
@@ -376,13 +467,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/07/14/html/">html</a>
+                    <a href="/2021/07/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/07/02/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+                    <a href="/2021/07/03/%E5%BC%82%E5%B8%B8/">异常</a>
                 </span>
             </li>
             
@@ -427,17 +518,17 @@
 
                 
                 <li>
-                    <a href="/2021/07/03/%E5%BC%82%E5%B8%B8/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2021/07/23/mysql/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2021/07/03/%E5%BC%82%E5%B8%B8/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2021/07/23/mysql/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/2021/07/03/%E5%BC%82%E5%B8%B8/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2021/07/23/mysql/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
                 
             </ul>
@@ -445,13 +536,13 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/css/" style="font-size: 18.095150072406362px;" class="tag-cloud-link">css</a>
+    <a href="/tags/css/" style="font-size: 18.01031387984937px;" class="tag-cloud-link">css</a>
     
-    <a href="/tags/html/" style="font-size: 9.66498961824157px;" class="tag-cloud-link">html</a>
+    <a href="/tags/html/" style="font-size: 15.964805124485004px;" class="tag-cloud-link">html</a>
     
-    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 15.789869295225985px;" class="tag-cloud-link">数据结构</a>
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 13.449128674409753px;" class="tag-cloud-link">数据结构</a>
     
-    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 15.261485274484043px;" class="tag-cloud-link">Java基础</a>
+    <a href="/tags/Java%E5%9F%BA%E7%A1%80/" style="font-size: 17.85655316466992px;" class="tag-cloud-link">Java基础</a>
     
 </div>
                 
